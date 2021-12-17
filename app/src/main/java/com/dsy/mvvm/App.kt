@@ -6,7 +6,6 @@ import androidx.multidex.MultiDexApplication
 import com.bumptech.glide.Glide
 import com.dsy.mvvm.manager.ActivityManager
 import com.dsy.mvvm.utils.CrashHandler
-import com.dsy.mvvm.utils.GSON
 import com.dsy.mvvm.utils.log.LogUtils
 import com.dsy.mvvm.utils.logger
 import com.jeremyliao.liveeventbus.LiveEventBus
@@ -51,7 +50,7 @@ class App : MultiDexApplication() {
         initRefreshLayout()
         initAutoSize()
 
-        logger.json(GSON.toJson(resources.displayMetrics))
+        logger.json(resources.displayMetrics)
     }
 
     private fun initRefreshLayout() {

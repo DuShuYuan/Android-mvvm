@@ -9,28 +9,6 @@ object AppConfig {
 
 
     /**
-     * 按页朗读
-     */
-    var readAloudByPage: Boolean
-        get() = config.getBoolean("readAloudByPage",false)
-        set(value) {
-            config.edit {
-                putBoolean("readAloudByPage", value)
-            }
-        }
-
-    /**
-     * 亮屏时间
-     */
-    var keepLight: String?
-        get() = config.getString("keepLight",null)
-        set(value) {
-            config.edit {
-                putString("keepLight", value)
-            }
-        }
-
-    /**
      * 弹幕开关
      */
     var isDanMuOpen: Boolean

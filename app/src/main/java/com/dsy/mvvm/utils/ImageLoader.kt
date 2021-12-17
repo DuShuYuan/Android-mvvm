@@ -16,7 +16,7 @@ fun ImageView.load(url: String, options: (RequestOptions.() -> Unit)? = null) {
             .into(this)
 }
 
-fun ImageView.loadPhoto(url: String, forceLoad: Boolean = false) {
+fun ImageView.loadPhoto(url: String) {
     Glide.with(context)
             .load(url)
             .circleCrop()
