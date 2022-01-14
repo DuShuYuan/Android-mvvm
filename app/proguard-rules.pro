@@ -131,14 +131,13 @@ public static ** inflate(...);
 -keep class com.lxj.xpopup.**{*;}
 
 #==================================================================
-#PictureSelector 2.0
+#PictureSelector 3.0
 -keep class com.luck.picture.lib.** { *; }
-#Ucrop
+-keep class com.luck.lib.camerax.** { *; }
+
 -dontwarn com.yalantis.ucrop**
 -keep class com.yalantis.ucrop** { *; }
 -keep interface com.yalantis.ucrop** { *; }
-#Okio
--dontwarn org.codehaus.mojo.animal_sniffer.*
 
 #=========liveeventbus============================================
 -dontwarn com.jeremyliao.liveeventbus.**
