@@ -7,7 +7,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.dsy.mvvm.App
 import com.dsy.mvvm.utils.coroutine.Coroutine
-import io.reactivex.disposables.CompositeDisposable
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -16,7 +15,6 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
     CoroutineScope by MainScope() {
 
     val context: Context by lazy { this.getApplication<App>() }
-    val disposable = CompositeDisposable()
 
     val onError = MutableLiveData<Int>()
     val loading = MutableLiveData<Boolean>()
@@ -33,7 +31,6 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
     override fun onCleared() {
         super.onCleared()
         cancel()
-        disposable.clear()
     }
 
 
